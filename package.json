@@ -1,0 +1,18 @@
+{
+  "name": "api-knex-auxilium",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "author": "Leonardo Camboim <leonardoribeirocamboim@gmail.com>",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.95.7",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
