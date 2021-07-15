@@ -8,14 +8,14 @@ exports.up = async knex => knex.schema.createTable('apadrinhamento', table => {
         .onDelete('CASCADE')
 
     table.integer('criCod')
-        .references('ciranca.criCod')
+        .references('crianca.criCod')
         .notNullable()
         .onDelete('CASCADE')
 
-    table.integer('padCod')
-        .references('padrinhos.padCod')
-        .notNullable()
-        .onDelete('CASCADE')
+    // table.integer('padCod')
+    //     .references('padrinhos.padCod')
+    //     .notNullable()
+    //     .onDelete('CASCADE')
 
     table.timestamp(true, true)
 })

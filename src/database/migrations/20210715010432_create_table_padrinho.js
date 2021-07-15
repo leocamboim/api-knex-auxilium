@@ -1,11 +1,11 @@
 
 exports.up = async knex => knex.schema.createTable('padrinhos', table => {
-    table.increments('PadCod')
-    table.text('PadNome').notNullable()
-    table.text('PadCPF').notNullable()
-    table.text('PadNum').notNullable()
-    table.text('PadLog').unique().notNullable()
-    table.text('PadSen').notNullable()
+    table.increments('padCod')
+    table.text('padNome').notNullable()
+    table.text('padCPF').notNullable()
+    table.text('padNum').notNullable()
+    table.text('padLog').unique().notNullable()
+    table.text('padSen').notNullable()
 
     //relacionamentos
     table.integer('telCod')

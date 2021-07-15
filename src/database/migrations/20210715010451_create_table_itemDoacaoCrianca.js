@@ -1,8 +1,8 @@
 
 exports.up = async knex => knex.schema.createTable('itemDoacaoCrianca', table => {
 
-    table.integer('PadCod')
-        .references('padrinhos.PadCod')
+    table.integer('padCod')
+        .references('padrinhos.padCod')
         .notNullable()
         .onDelete('CASCADE')
 
