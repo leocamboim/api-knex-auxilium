@@ -1,7 +1,21 @@
 
 exports.up = async knex => knex.schema.createTable('apadrinhamento', table => {
     table.increments('apaCod')
-    // table.text('estNom')
+
+    table.integer('tApCod')
+        .references('tipoApadrinhamento.tApCod')
+        .notNullable()
+        .onDelete('CASCADE')
+
+    table.integer('criCod')
+        .references('ciranca.criCod')
+        .notNullable()
+        .onDelete('CASCADE')
+
+    table.integer('padCod')
+        .references('padrinhos.padCod')
+        .notNullable()
+        .onDelete('CASCADE')
 
     table.timestamp(true, true)
 })

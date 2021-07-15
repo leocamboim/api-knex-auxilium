@@ -1,13 +1,13 @@
 const express = require('express');
 const routes = express.Router();
 
-// const UserController = require ('./controllers/UserController');
+const CepController = require ('./controllers/CepController');
 // const ProjectsController = require ('./controllers/ProjectsController');
 
 routes
-    // //users
+    //cep
     // .get('/users', UserController.index)
-    // .post('/users', UserController.create)
+    .post('/cep', CepController.create)
     // .put('/users/:id', UserController.update)
     // .delete('/users/:id', UserController.delete)
     // //projects
